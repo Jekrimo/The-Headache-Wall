@@ -1,0 +1,39 @@
+*{
+  width: auto;
+}
+h1{
+  text-align: center;
+  margin-left: -600px;
+}
+p{
+  text-align: center;
+  margin-left: -600px;
+}
+#create_user{
+  display: inline-block;
+  text-align: right;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+input{
+  margin-top: 10px;
+}
+  #create_user input {
+    margin-top: : 25px;
+  }
+  #create_user .button{
+    margin-left: 275px;
+    display: block;
+
+  }
+#login{
+  display: inline-block;
+  text-align: right;
+  margin-top: 5px;
+  margin-left: 25px;
+}
+
+#login .button{
+  display: block;
+  margin-left: 250px;
+}

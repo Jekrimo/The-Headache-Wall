@@ -1,0 +1,53 @@
+<html>
+<div id= "container">
+<head>
+  <title>Success emails</title>
+  <link rel= 'stylesheet' type= 'text/css' href= "{{ url_for('static', filename='wall.css')}}">
+</head>
+<body>
+  <h1>Coding Dojo Wall!</h1>
+    <h2>Welcome {{ users.full_name }}</h2><h6><a href= "/wall/userlog_out/">log out</a></h6>
+  <h3>Post a message</h3>
+
+  <div id= "messagebox">
+    <form action = '/messages/<users_id>' method= "POST">
+      <label for= "message"><input type= "textbox" name = "message" id = "message" class= "message"></label>
+        <input type= "submit" value= "Post a message" class= "sub">
+    </form>
+  </div>
+<table>
+  <tbody>
+    {% for user_messages in messages %}
+      <div id= "user_messages_info"><td><tr>
+        {{ user_messages.full_name }} - {{user_messages.created_at}}</td><br>
+      </tr></div>
+      <tr>
+        <td><div id= "user_messages">{{ user_messages.message }}</div></td>
+          {% if users.id == messages.user_id %}
+        <a href= "/wall/delete">delete</a><br>
+        {% endif %}
+     </tr>
+
+        <table>
+            <tbody>
+              {% for comments in user_comments %}
+                {% if user_messages.id == comments.messages_id%}
+                  <div id = "usercommentinfo">
+                    <p>{{ comments.full_name }}  {{ comments.created_at }}</p></div>
+                      <div id= "usercomments">
+                      {{ comments.comment}}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              <td><form action = '/comments/{{ user_messages.id }}' method= "POST">
+              <div id= "commentbox">  <label for= "comment"><input type= "textbox" name = "comment" id = "comment" class= "comment"></label>  </div>
+                <div id= "commentbutton"><input type= "submit" value= "Post a comment"></div>
+              </form></td>
+            </tbody>
+        </table>
+       </tbody>
+  {% endfor %}
+</table>
+</body>
+</div>
+</html>

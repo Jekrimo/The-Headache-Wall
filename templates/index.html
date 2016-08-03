@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>emails</title>
+  <link rel= 'stylesheet' type= 'text/css' href= "{{ url_for('static', filename='index.css')}}">
+</head>
+<body>
+  <h1>Hello! Let's sign you up for the Wall!</h1>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p>{{message}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+<div id= "create_user">
+  <form action='/create' method='POST'>
+    <label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label><br>
+      <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label><br>
+        <label for="email">Email Address:<input type="text" name="email" id="email"></label><br>
+      <label for="password">Password:<input type="text" name="password" id="password"></label><br>
+    <label for="conf_pass">Confirm Password:<input type="text" name="conf_pass" id="conf_pass"></label>
+  <input type="submit" value="Add" class= "button">
+</form>
+</div>
+
+<div id= "login">
+  <form action = '/login' method= 'POST'>
+    <h3>...Or Login!</h3>
+    <label for= "email">Email Address:<input type= "text" name= "log_email" id= "log_email"><br>
+      <label for= "email">password:<input type= "text" name= "log_password" id= "log_password">
+    <input type="submit" value="Log In" class="button">
+  </form>
+</div>
+
+</body>
+</html>

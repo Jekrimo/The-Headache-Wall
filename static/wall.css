@@ -1,0 +1,81 @@
+*{
+  width: auto;
+}
+#container{
+  width: 1000px;
+  height: auto;
+  padding: 10px;
+  margin-left: 25px;
+}
+h2{
+  display: inline-block;
+  margin-left: 475px;
+  margin-top: -60px;
+  font-size: 1.5em;
+}
+h6 {
+  display: inline-block;
+  margin-left: 770px;
+  margin-top: -55px;
+  font-size: 1.0em;
+}
+#messagebox .message{
+  width: 700px;
+  height: 100px;
+  margin-top: 10px;
+}
+  #messagebox .sub {
+    color: white;
+    background-color: blue;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px #888888;
+  }
+  .sub{
+    margin-top: 20px;
+    margin-left: 580px;
+    display: block;
+    position: relative;
+  }
+
+
+#user_messages_info {
+  font-size: 1.2em;
+}
+
+#user_messages{
+  margin-left: 25px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 250px;
+  height: auto;
+  border: 1px solid black;
+  font-family: arial;
+  padding: 10px;
+}
+  #user_messages a{
+    margin-left: 150px;
+  }
+
+#usercommentinfo{
+  margin-left: 35px;
+  margin-top: 5px;
+  font-size: 1.1em;
+  font-family: sans-serif;
+}
+  #usercomments{
+    margin-left: 40px;
+    width: 250px;
+    height: auto;
+    font-family: sans-serif;
+  }
+  #commentbox{
+    margin-left: 40px;
+  }
+  #commentbutton input{
+    color: white;
+    background-color: green;
+    margin-left: 103px;
+    margin-top: 5px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px #888888;
+  }
